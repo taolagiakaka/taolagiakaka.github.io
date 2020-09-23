@@ -1,0 +1,17 @@
+:root {
+	--white-color: #fff;
+	--black-color: #000;
+	--text-color: #333;
+	--text-color-title: #5b9bd6;
+	--dark-color: #525659;
+}
+* {
+	box-sizing: inherit; /* Kế thừa*/
+}
+
+html {
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.6rem;
+	box-sizing: border-box;
+	font-size: 62.5%;
+}

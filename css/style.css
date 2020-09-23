@@ -1,0 +1,87 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Lato', sans-serif;
+	background: var(--dark-color);
+	font-size: 14px;
+	padding: 5%;
+}
+.main {
+	padding: 5%;
+	background: var(--white-color);
+}
+.line {
+	margin: 10px 0;
+	height: 1px;
+	width: 100%;
+	background: #d6d4d4;
+}
+.heading {
+	color: var(--text-color-title);
+	text-transform: uppercase;
+	font-weight: 700;
+	margin: 5px 0;
+}
+/* Info */
+.info h1 {
+	color: var(--text-color-title);
+	font-weight: 400;
+	font-size: 40px;
+	font-family: 'Roboto', sans-serif;
+}
+.info p {
+	margin: 10px 0;
+	height: 2px;
+	width: 20%;
+	background: var(--text-color-title);
+}
+.info h2 {
+	font-weight: 500;
+	margin: 15px 0;
+}
+.info .contact {
+	display: flex;
+}
+.info .contact span {
+	padding-right: 25px;
+}
+/* Summary */
+.summary p {
+	text-indent: 5%;
+}
+/* Technical Skills */
+
+.technical-skills .skill .title-skill {
+	vertical-align: middle;
+}
+.technical-skills .skill i {
+	font-size: 45%;
+	margin-right: 15px;
+}
+.technical-skills .skill ul {
+	list-style: none;
+	margin-left: 25px;
+}
+.technical-skills .skill ul li::before {
+	content: '-';
+	text-indent: -5px;
+	margin-right: 25px;
+}
+/* Education */
+.education .info-education {
+	display: flex;
+	justify-content: space-between;
+}
+/* Word Experience */
+.word-experience .work-at {
+	margin: 10px 0;
+}
+.word-experience .work-at .info-work {
+	display: flex;
+	justify-content: space-between;
+}
+.word-experience ul {
+	margin-left: 45px;
+}
