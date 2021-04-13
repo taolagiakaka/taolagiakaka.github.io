@@ -1,87 +1,179 @@
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body {
-	font-family: 'Lato', sans-serif;
-	background: var(--dark-color);
-	font-size: 14px;
-	padding: 5%;
-}
-.main {
-	padding: 5%;
-	background: var(--white-color);
-}
-.line {
-	margin: 10px 0;
-	height: 1px;
-	width: 100%;
-	background: #d6d4d4;
-}
-.heading {
-	color: var(--text-color-title);
-	text-transform: uppercase;
-	font-weight: 700;
-	margin: 5px 0;
-}
-/* Info */
-.info h1 {
-	color: var(--text-color-title);
-	font-weight: 400;
-	font-size: 40px;
-	font-family: 'Roboto', sans-serif;
-}
-.info p {
-	margin: 10px 0;
-	height: 2px;
-	width: 20%;
-	background: var(--text-color-title);
-}
-.info h2 {
-	font-weight: 500;
-	margin: 15px 0;
-}
-.info .contact {
-	display: flex;
-}
-.info .contact span {
-	padding-right: 25px;
-}
-/* Summary */
-.summary p {
-	text-indent: 5%;
-}
-/* Technical Skills */
 
-.technical-skills .skill .title-skill {
-	vertical-align: middle;
+body {
+    font-family: 'Noto Serif', 'Noto Serif SC', 'Noto Serif JP';
 }
-.technical-skills .skill i {
-	font-size: 45%;
-	margin-right: 15px;
+
+.description ul {
+    padding-left: 20px;
 }
-.technical-skills .skill ul {
-	list-style: none;
-	margin-left: 25px;
+
+.contact {
+    background-color: #d0e2ff;
+    padding: 40px 50px 20px;
+    display: flex;
+    align-content: space-between;
+    font-size: 11.5px;
+    line-height: 17px;
+    color: #303030;
+    word-wrap: break-word;
 }
-.technical-skills .skill ul li::before {
-	content: '-';
-	text-indent: -5px;
-	margin-right: 25px;
+
+.contact .info {
+    flex-grow: 2;
 }
-/* Education */
-.education .info-education {
-	display: flex;
-	justify-content: space-between;
+.contact .info .name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
-/* Word Experience */
-.word-experience .work-at {
-	margin: 10px 0;
+.contact .info .name span:first-child {
+    margin-right: 0.4em;
 }
-.word-experience .work-at .info-work {
-	display: flex;
-	justify-content: space-between;
+.contact .info .occupation {
+    font-size: 12px;
+    margin-bottom: 5px;
 }
-.word-experience ul {
-	margin-left: 45px;
+.contact .info .occupation p {
+    font-weight: bold;
+}
+.info .summary {
+    margin-bottom: 20px;
+}
+.info .summary .simple {
+    line-height: 17px;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.contact-information {
+    background: #eeeeee;
+    padding: 8px 50px;
+    font-size: 12px;
+    line-height: 17px;
+    color: #303030;
+    word-wrap: break-word;
+    font-family: 'Rubik';
+}
+.contact-information .title {
+    page-break-after: avoid;
+    display: none;
+}
+
+.contact-information .header-info {
+    display: flex;
+}
+
+.contact-information .header-info p {
+    margin-bottom: 0;
+}
+
+.contact-information .header-info .sub-title {
+    margin-right: 5px;
+    font-weight: bold;
+}
+.contact-information .header-info .value {
+    word-break: break-all;
+}
+
+.content {
+    padding: 16px 50px 40px;
+    font-family: 'Rubik';
+    font-size: 11.5px;
+    line-height: 17px;
+    color: #303030;
+    word-wrap: break-word;
+}
+
+.content .title {
+    color: #3176e0;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dddddd;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    page-break-after: avoid;
+}
+.content .cpl-container {
+    margin-bottom: 20px;
+}
+.content .cpl-container .experience {
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 200px auto 1fr;
+}
+.content .cpl-container .date {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.content .cpl-container .date .startDate,
+.content .cpl-container .date .endDate {
+    font-style: normal;
+    display: inline;
+    margin-top: 3px;
+}
+
+.content .cpl-container .date .endDate::before {
+    content: ' - ';
+}
+
+.content .cpl-container .experience .position {
+    grid-column: 2 / span 3;
+    grid-row: 1;
+    font-size: 14.5px;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+.content .cpl-container .experience .company {
+    grid-column: 2;
+    grid-row: 2;
+    margin-right: 8px;
+    font-weight: bold;
+    font-style: normal;
+}
+.content .cpl-container .experience .description {
+    line-height: 17px;
+    font-size: 12px;
+    grid-column: 2 / span 3;
+    grid-row: 3;
+    width: 100%;
+    margin-top: 8px;
+}
+.content .cpl-container .education {
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 200px auto 1fr;
+}
+.content .cpl-container .education .degree {
+    grid-column: 2 / span 3;
+    grid-row: 1;
+    font-size: 14.5px;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+.content .cpl-container .education .college {
+    grid-column: 2;
+    grid-row: 2;
+    margin-right: 8px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.skill .title-skill {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.skill ul {
+    list-style: inside;
+    margin-top: 5px;
+    padding-left: 50px;
 }

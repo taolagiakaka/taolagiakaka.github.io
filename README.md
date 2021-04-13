@@ -1,2 +1,0 @@
-# taolagiakaka.github.io
-CV
