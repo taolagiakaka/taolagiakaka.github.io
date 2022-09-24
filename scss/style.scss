@@ -282,44 +282,39 @@ h6,
 #experience {
     position: relative;
     padding: 0;
-}
+    .section-header p {
+        margin: 0;
+    }
+    .exp-column {
+        margin-top: 30px;
+        padding: 25px 30px;
+        background: #e9ecef;
+    }
+    .exp-column::before {
+        position: absolute;
+        content: '';
+        height: 3px;
+        top: 30px;
+        right: 100%;
+        left: 15px;
+        background: $primary;
+    }
+    .exp-column::after {
+        position: absolute;
+        content: '';
+        height: 3px;
+        bottom: 0;
+        right: 15px;
+        left: 100%;
+        background: $primary;
+    }
+    .exp-column:hover::before {
+        transition: 0.3s;
+        right: 15px;
+    }
 
-#experience .section-header p {
-    margin: 0;
-}
-
-#experience .exp-column {
-    margin-top: 30px;
-    padding: 25px 30px;
-    background: #e9ecef;
-}
-
-#experience .exp-column::before {
-    position: absolute;
-    content: '';
-    height: 3px;
-    top: 30px;
-    right: 100%;
-    left: 15px;
-    background: $primary;
-}
-
-#experience .exp-column::after {
-    position: absolute;
-    content: '';
-    height: 3px;
-    bottom: 0;
-    right: 15px;
-    left: 100%;
-    background: $primary;
-}
-
-#experience .exp-column:hover::before {
-    transition: 0.3s;
-    right: 15px;
-}
-
-#experience .exp-column:hover::after {
-    transition: 0.3s;
-    left: 15px;
+    .exp-column:hover::after {
+        transition: 0.3s;
+        left: 15px;
+    }
 }
