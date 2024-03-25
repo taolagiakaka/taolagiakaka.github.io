@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 export default function Home() {
     return (
         <>
             <div className="h-screen bg-primary flex flex-col items-center justify-center">
                 <div className="bg-white rounded-full p-2 shadow-sm mb-10">
-                    <img
+                    <Image
                         height={163}
                         width={162}
                         className="block rounded-full"
