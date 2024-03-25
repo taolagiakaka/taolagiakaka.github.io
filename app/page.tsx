@@ -14,7 +14,7 @@ export default function Home() {
                     />
                 </div>
                 <h2 className="uppercase font-semibold text-4xl mb-10 text-center">
-                    Hello! I'm Nguyen Truong Gia -<br /> .NET Developer
+                    Hello! I&apos;m Nguyen Truong Gia -<br /> .NET Developer
                 </h2>
                 <p className="text-2xl mb-10">
                     Based in Ho Chi Minh City, Vietnam.
