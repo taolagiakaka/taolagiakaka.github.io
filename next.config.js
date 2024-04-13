@@ -1,7 +1,7 @@
 // next.config.js
 module.exports = {
-  reactStrictMode: true,
-  experimental: {
-    outputStandalone: true,
-  },
+    reactStrictMode: true,
+    experimental: {
+        outputStandalone: true,
+    },
 };
