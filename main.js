@@ -1,15 +1,15 @@
 function loadTableData(filterId) {
-  fetch("./data.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const item = data.find((item) => item.SoPhieu === filterId);
+    fetch("./data.json")
+        .then((response) => response.json())
+        .then((data) => {
+            const item = data.find((item) => item.SoPhieu === filterId);
 
-      const tbody = document.querySelector("#myTable");
+            const tbody = document.querySelector("#myTable");
 
-      var lol = "";
+            var lol = "";
 
-      if (item !== undefined) {
-        lol += `
+            if (item !== undefined) {
+                lol += `
           <tr style="height: 24.75pt">
           <td
             colspan="6"
@@ -25,12 +25,13 @@ function loadTableData(filterId) {
             >
               <span style="font-weight: bold; vertical-align: middle"
                 >Phường/Xã (1):</span
-              ><span class="font231" style="vertical-align: middle"
-                >__________________</span
+              ><span class="font231" style="vertical-align: middle;font-weight: bold"
+                > Vĩnh Thanh</span
               >
             </p>
           </td>
           <td
+           rowspan="2"
             colspan="13"
             style="
               padding-top: 0.75pt;
@@ -66,12 +67,79 @@ function loadTableData(filterId) {
             >
               <span style="font-weight: bold; vertical-align: middle"
                 >Số phiếu (5):</span
-              ><span class="font231" style="vertical-align: middle"
-                >____________________</span
+              ><span class="font231" style="vertical-align: middle;font-weight:bold"
+                > ${item.SoPhieu}</span
               >
             </p>
           </td>
         </tr>
+
+ <tr style="height: 24.75pt">
+                    <td
+                        colspan="6"
+                        style="
+                            padding-top: 0.75pt;
+                            padding-right: 0.75pt;
+                            padding-left: 0.75pt;
+                            vertical-align: middle;
+                        "
+                    >
+                        <p
+                            style="
+                                text-indent: 0pt;
+                                font-size: 12pt;
+                                vertical-align: middle;
+                            "
+                        >
+                            <span
+                                style="
+                                    font-weight: bold;
+                                    vertical-align: middle;
+                                "
+                                >KP/Thôn/Ấp:</span
+                            ><span
+                                class="font231"
+                                style="
+                                    vertical-align: middle;
+                                    font-weight: bold;
+                                "
+                            > ${item.ChuHo.DiaChi}</span>
+                        </p>
+                    </td>
+
+                    <td
+                        colspan="8"
+                        style="
+                            padding-top: 0.75pt;
+                            padding-right: 0.75pt;
+                            padding-left: 0.75pt;
+                            vertical-align: middle;
+                        "
+                    >
+                        <p
+                            style="
+                                text-indent: 0pt;
+                                font-size: 12pt;
+                                vertical-align: middle;
+                            "
+                        >
+                            <span
+                                style="
+                                    font-weight: bold;
+                                    vertical-align: middle;
+                                "
+                                >Diện cư trú: </span
+                            ><span
+                                class="font231"
+                                style="
+                                    vertical-align: middle;
+                                    font-weight: bold;
+                                "
+                                > ${item.ChuHo.DienCuTru}</span
+                            >
+                        </p>
+                    </td>
+                </tr>
 
         <tr style="height: 27.75pt">
           <td
@@ -90,8 +158,8 @@ function loadTableData(filterId) {
             >
               <span style="font-weight: bold; vertical-align: middle"
                 >Địa chỉ (3):</span
-              ><span class="font231" style="vertical-align: middle"
-                >_____________________</span
+              ><span class="font231" style="vertical-align: middle; font-weight:bold"
+                > ${item.ChuHo.DiaChi}</span
               >
             </p>
           </td>
@@ -138,7 +206,7 @@ function loadTableData(filterId) {
               <span style="font-weight: bold; vertical-align: middle"
                 >Điện thoại: (7):</span
               ><span class="font231" style="vertical-align: middle"
-                >_________________</span
+                >${item.ChuHo.DienThoai}</span
               >
             </p>
           </td>
@@ -2714,7 +2782,7 @@ function loadTableData(filterId) {
             >
               <span style="vertical-align: middle">DT:</span
               ><span class="font211" style="vertical-align: middle;font-weight:bold">${
-                item.ChuHo.DanToc
+                  item.ChuHo.DanToc
               }</span>
             </p>
           </td>
@@ -2739,7 +2807,7 @@ function loadTableData(filterId) {
               "
             >
               <span style="vertical-align: middle">TG: ${
-                item.ChuHo.TonGiao
+                  item.ChuHo.TonGiao
               }</span>
             </p>
           </td>
@@ -3193,10 +3261,10 @@ function loadTableData(filterId) {
               <span style="vertical-align: middle">Cha, mẹ, Ng đỡ đầu: </span
               ><span class="font241" style="vertical-align: middle"
                 >${
-                  item.ChuHo.QHVoiChuHo !== "Vợ" &&
-                  item.ChuHo.QHVoiChuHo !== "Chủ Hộ"
-                    ? item.ChuHo.Ten
-                    : ""
+                    item.ChuHo.QHVoiChuHo !== "Vợ" &&
+                    item.ChuHo.QHVoiChuHo !== "Chủ Hộ"
+                        ? item.ChuHo.Ten
+                        : ""
                 }</span
               >
             </p>
@@ -3629,9 +3697,9 @@ function loadTableData(filterId) {
         </tr>
         `;
 
-        for (let i = 0; i < item.ThanhVien.length; i++) {
-          const element = item.ThanhVien[i];
-          lol += `
+                for (let i = 0; i < item.ThanhVien.length; i++) {
+                    const element = item.ThanhVien[i];
+                    lol += `
         <tr style="height: 18pt">
           <td
             rowspan="5"
@@ -4604,7 +4672,7 @@ function loadTableData(filterId) {
               "
             >
               <span style="vertical-align: middle">Ngày sinh: </span>
-              ${item.ChuHo.NgaySinh}
+              ${element.NgaySinh}
             </p>
           </td>
           <td
@@ -5102,7 +5170,7 @@ function loadTableData(filterId) {
             >
               <span style="vertical-align: middle">DT:</span
               ><span class="font211" style="vertical-align: middle;font-weight:bold">${
-                item.ChuHo.DanToc
+                  item.ChuHo.DanToc
               }</span>
             </p>
           </td>
@@ -5127,7 +5195,7 @@ function loadTableData(filterId) {
               "
             >
               <span style="vertical-align: middle">TG: ${
-                item.ChuHo.TonGiao
+                  item.ChuHo.TonGiao
               }</span>
             </p>
           </td>
@@ -5581,9 +5649,10 @@ function loadTableData(filterId) {
               <span style="vertical-align: middle">Cha, mẹ, Ng đỡ đầu: </span
               ><span style="vertical-align: middle;font-weight:bold"
                 >${
-                  element.QHVoiChuHo !== "Vợ" && element.QHVoiChuHo !== "Chủ Hộ"
-                    ? item.ChuHo.Ten
-                    : ""
+                    element.QHVoiChuHo !== "Vợ" &&
+                    element.QHVoiChuHo !== "Chủ Hộ"
+                        ? item.ChuHo.Ten
+                        : ""
                 }</span
               >
             </p>
@@ -6015,41 +6084,41 @@ function loadTableData(filterId) {
           </td>
         </tr>
         `;
-        }
+                }
 
-        tbody.innerHTML = lol;
-      }
-    })
-    .catch((error) => {
-      console.error("Error loading JSON data:", error);
-    });
+                tbody.innerHTML = lol;
+            }
+        })
+        .catch((error) => {
+            console.error("Error loading JSON data:", error);
+        });
 }
 
 function loadComboboxData() {
-  const combobox = document.getElementById("combobox");
+    const combobox = document.getElementById("combobox");
 
-  // Fetch the data from a JSON file
-  fetch("data.json") // Replace with the path to your actual JSON file
-    .then((response) => response.json()) // Parse the JSON data
-    .then((data) => {
-      // Loop through each item in the data and create an option for the combobox
-      data.forEach((item) => {
-        const option = document.createElement("option");
-        option.value = item.SoPhieu;
-        option.textContent = `Số phiếu: ${item.SoPhieu} - ${item.ChuHo.Ten}`;
-        combobox.appendChild(option);
-      });
-      combobox.selectedIndex = 0;
-      loadTableData(combobox.value);
-    })
-    .catch((error) => console.error("Error loading data:", error)); // Handle any errors
+    // Fetch the data from a JSON file
+    fetch("data.json") // Replace with the path to your actual JSON file
+        .then((response) => response.json()) // Parse the JSON data
+        .then((data) => {
+            // Loop through each item in the data and create an option for the combobox
+            data.forEach((item) => {
+                const option = document.createElement("option");
+                option.value = item.SoPhieu;
+                option.textContent = `Số phiếu: ${item.SoPhieu} - ${item.ChuHo.Ten}`;
+                combobox.appendChild(option);
+            });
+            combobox.selectedIndex = 0;
+            loadTableData(combobox.value);
+        })
+        .catch((error) => console.error("Error loading data:", error)); // Handle any errors
 }
 
 document.getElementById("combobox").addEventListener("change", function () {
-  const selectedId = this.value;
+    const selectedId = this.value;
 
-  if (selectedId) {
-    loadTableData(selectedId);
-  }
+    if (selectedId) {
+        loadTableData(selectedId);
+    }
 });
 window.onload = loadComboboxData;
