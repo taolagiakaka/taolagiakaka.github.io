@@ -96,7 +96,7 @@ function loadTableData(filterId) {
                                     font-weight: bold;
                                     vertical-align: middle;
                                 "
-                                >KP/Thôn/Ấp:</span
+                                >KP/Thôn/Ấp (2):</span
                             ><span
                                 class="font231"
                                 style="
@@ -128,7 +128,7 @@ function loadTableData(filterId) {
                                     font-weight: bold;
                                     vertical-align: middle;
                                 "
-                                >Diện cư trú: </span
+                                >Diện cư trú (6): </span
                             ><span
                                 class="font231"
                                 style="
@@ -178,7 +178,7 @@ function loadTableData(filterId) {
               style="
                 text-indent: 0pt;
                 text-align: center;
-                font-size: 12pt;
+                font-size: 14pt;
                 vertical-align: middle;
               "
             >
@@ -1514,9 +1514,10 @@ function loadTableData(filterId) {
                 text-indent: 0pt;
                 text-align: center;
                 font-size: 10pt;
+                font-weight: bold;
               "
             >
-              <span style="font-weight: bold; -aw-import: ignore">&nbsp;</span>
+              <span style=" -aw-import: ignore">&nbsp;</span>
               ${item.ChuHo.NamTocNghiep}
             </p>
           </td>
@@ -2781,7 +2782,7 @@ function loadTableData(filterId) {
                 vertical-align: middle;
               "
             >
-              <span style="vertical-align: middle">DT:</span
+              <span style="vertical-align: middle">DT: </span
               ><span class="font211" style="vertical-align: middle;font-weight:bold">${
                   item.ChuHo.DanToc
               }</span>
@@ -2807,7 +2808,7 @@ function loadTableData(filterId) {
                 vertical-align: middle;
               "
             >
-              <span style="vertical-align: middle">TG: ${
+              <span style="vertical-align: middle;font-weight:bold">TG: ${
                   item.ChuHo.TonGiao
               }</span>
             </p>
@@ -3903,6 +3904,7 @@ function loadTableData(filterId) {
                 text-indent: 0pt;
                 text-align: center;
                 font-size: 10pt;
+                font-weight: bold;
               "
             >
               <span style="font-weight: bold; -aw-import: ignore">&nbsp;</span>
@@ -5196,7 +5198,7 @@ function loadTableData(filterId) {
                 vertical-align: middle;
               "
             >
-              <span style="vertical-align: middle">TG: ${
+              <span style="vertical-align: middle; font-weight:bold">TG: ${
                   item.ChuHo.TonGiao
               }</span>
             </p>
