@@ -1360,10 +1360,11 @@ function loadTableData(filterId) {
                 text-indent: 0pt;
                 text-align: center;
                 font-size: 10.5pt;
+                font-weight: bold;
               "
             >
               <span style="font-weight: bold; -aw-import: ignore">&nbsp;</span>
-              ${item.ChuHo.Ten}
+               ${item.ChuHo.Ten}
             </p>
           </td>
           <td
@@ -3748,6 +3749,7 @@ function loadTableData(filterId) {
                 text-indent: 0pt;
                 text-align: center;
                 font-size: 10.5pt;
+                font-weight: bold;
               "
             >
               <span style="font-weight: bold; -aw-import: ignore">&nbsp;</span>
@@ -5145,7 +5147,7 @@ function loadTableData(filterId) {
               "
             >
               <span style="vertical-align: middle">Giới tính:</span>
-                ${item.ChuHo.GioiTinh}
+                ${element.GioiTinh}
               </p>
           </td>
           <td
@@ -5648,12 +5650,7 @@ function loadTableData(filterId) {
             >
               <span style="vertical-align: middle">Cha, mẹ, Ng đỡ đầu: </span
               ><span style="vertical-align: middle;font-weight:bold"
-                >${
-                    element.QHVoiChuHo !== "Vợ" &&
-                    element.QHVoiChuHo !== "Chủ Hộ"
-                        ? item.ChuHo.Ten
-                        : ""
-                }</span
+                >${element.HoVaTenChaHoacMe}</span
               >
             </p>
           </td>
