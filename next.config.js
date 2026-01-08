@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export", // <=== enables static exports
-    reactStrictMode: true,
+    images: {
+        domains: [], // Add your image domains here
+    },
 };
 
 module.exports = nextConfig;

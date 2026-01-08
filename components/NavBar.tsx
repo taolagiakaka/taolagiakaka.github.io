@@ -1,37 +1,50 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
-const NavBar = () => {
+const navItems = [
+    { href: "/", label: "Home" },
+    { href: "#about", label: "About" },
+    { href: "#experience", label: "Experience" },
+    { href: "#skills", label: "Skills" },
+    { href: "#education", label: "Education" },
+];
+
+export default function Navbar() {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <>
-            <div className="sticky z-50 top-0 inset-x-0 h-16 items-center border-b border-gray-200 bg-white shadow-sm">
-                <div className="mx-auto w-full max-w-screen-xl px-2.5 md:px-20 ">
-                    <div className="flex h-16 items-center gap-8 justify-center font-semibold uppercase">
-                        <div className="border-b-[3px] border-primary">
-                            <Link href="#">Home</Link>
-                        </div>
-                        <div>
-                            <Link href="#">About</Link>
-                        </div>
-                        <div>
-                            <Link href="#">Services</Link>
-                        </div>
-                        <div>
-                            <Link href="#">Resume</Link>
-                        </div>
-                        <div>
-                            <Link href="#">FAQ</Link>
-                        </div>
-                        <div>
-                            <Link href="#">Client</Link>
-                        </div>
-                        <div>
-                            <Link href="#">Contact</Link>
-                        </div>
+        <nav
+            className={`sticky top-0 z-50 transition-all duration-200 ${
+                isScrolled
+                    ? "bg-white/90 backdrop-blur-sm shadow-sm"
+                    : "bg-transparent"
+            }`}
+        >
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="flex h-16 items-center justify-center">
+                    <div className="flex space-x-8">
+                        {navItems.map((item) => (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors uppercase"
+                            >
+                                {item.label}
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </div>
-        </>
+        </nav>
     );
-};
-
-export default NavBar;
+}
